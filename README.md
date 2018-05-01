@@ -31,34 +31,34 @@ scss: 'vue-style-loader!css-loader!px2rem-loader?remUnit=40&remPrecision=8!sass-
 
 > 注意事项：
 > 
-> 1、对于一些布局类的样式，宽度通常采用百分比为单位，如`width: 100%`; 又如配合`box-sizing: border-box`; 设置`width: 25%`可控制一行放4个div
+> 1、对于一些布局类的样式，宽度通常采用百分比为单位，如`width: 100%`; 又如配合`box-sizing: border-box`; 设置`width: 25%`可控制一行放4个div。
 > 
 > 2、对于一些小组件，如按钮、文字等，直接写设计稿上的css尺寸即可。如`font-size`, `margin`, `padding`, `height`…… 即使通过 PC 或 Pad 访问也不会丢失效果。
 
 #### 3. 项目目录
 
 ```
-|--app							// 应用目录
+|--app
 |	|--assets
-|	|	|--images				// 静态图片资源
+|	|	|--images		// 静态图片资源
 |	|	|	|--...
-|	|	|--styles				// 静态样式文件
+|	|	|--styles		// 静态样式文件
 |	|	|	|--...
 |	|--components
-|	|	|--core					// 模块化组件
+|	|	|--core			// 模块化组件
 |	|	|	|--...
-|	|	|--layout				// 布局组件
+|	|	|--layout		// 布局组件
 |	|	|	|--...
-|	|	|--home					// 主路由组件
+|	|	|--home			// 主路由组件
 |	|	|	|--index.vue
 |	|	|	|--...
-|	|	|--...					// 子路由组件
+|	|	|--...				// 子路由组件
 |	|--config
-|	|	|--router.js			// Vue路由配置
-|	|--App.vue					// 根组件
-|	|--index.html				// 页面模板
-|	|--index.js					// 入口文件
-|	|--viewport.js				// hotcss.js
+|	|	|--router.js	// Vue路由配置
+|	|--App.vue			// 根组件
+|	|--index.html		// 页面模板
+|	|--index.js			// 入口文件
+|	|--viewport.js	// hotcss.js
 |--build
 |	|--vue-loader.config.js		// Vue-loader配置
 |	|--webpack.config.js		// Webpack配置
