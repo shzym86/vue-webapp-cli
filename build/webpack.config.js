@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
-const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const createVueLoaderOptions = require('./vue-loader.config')
 
@@ -106,6 +105,7 @@ if (isDev) { //开发环境
     ],
     vendor: ['vue']
   }
+  // config.devtool = '#source-map'
   config.output.filename = '[name].[chunkhash:8].js'
   config.module.rules.push({
     test: /\.scss/,
@@ -127,19 +127,8 @@ if (isDev) { //开发环境
     new ExtractTextPlugin('styles.[contentHash:8].css', {
       ignoreOrder: true
     }),
-    new OptimizeCSSPlugin({
-      cssProcessorOptions: {
-        safe: true
-      }
-    }),
     new UglifyJsPlugin({
-      uglifyOptions: {
-        compress: {
-          warnings: false
-        }
-      },
-      sourceMap: false,
-      parallel: true
+      // sourceMap: true
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor'

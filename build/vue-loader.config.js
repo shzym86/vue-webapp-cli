@@ -13,11 +13,11 @@ module.exports = (isDev) => {
       scss: 'vue-style-loader!css-loader!px2rem-loader?remUnit=40&remPrecision=8!sass-loader'
     } : {
       css: ExtractTextPlugin.extract({
-        use: 'css-loader!px2rem-loader?remUnit=40&remPrecision=8',
+        use: 'css-loader?minimize!px2rem-loader?remUnit=40&remPrecision=8',
         fallback: 'vue-style-loader'
       }),
       scss: ExtractTextPlugin.extract({
-        use: 'css-loader!px2rem-loader?remUnit=40&remPrecision=8!sass-loader',
+        use: 'css-loader?minimize!px2rem-loader?remUnit=40&remPrecision=8!sass-loader',
         fallback: 'vue-style-loader'
       })
     }

@@ -70,10 +70,3 @@ scss: 'vue-style-loader!css-loader!px2rem-loader?remUnit=40&remPrecision=8!sass-
 |--.babelrc
 |--README.md
 ```
-
-#### 4. 其它
-
-如果升级了webpack 4 版本之后，部分依赖包可能会不兼容，从而编译过程中会报错。该脚手架采用webpack 3为基础，因此需要注意：
-
-- vue-loader的版本必须低于14.0
-- optimize-css-assets-webpack-plugin版本必须低于4.0
