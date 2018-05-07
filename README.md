@@ -38,35 +38,34 @@ scss: 'vue-style-loader!css-loader!px2rem-loader?remUnit=40&remPrecision=8!sass-
 #### 3. 项目目录
 
 ```
-|--app
-|	|--assets
-|	|	|--images		// 静态图片资源
-|	|	|	|--...
-|	|	|--styles		// 静态样式文件
-|	|	|	|--...
-|	|--components
-|	|	|--core			// 模块化组件
-|	|	|	|--...
-|	|	|--layout		// 布局组件
-|	|	|	|--...
-|	|	|--home			// 主路由组件
-|	|	|	|--index.vue
-|	|	|	|--...
-|	|	|--...				// 子路由组件
-|	|--config
-|	|	|--router.js	// Vue路由配置
-|	|--App.vue			// 根组件
-|	|--index.html		// 页面模板
-|	|--index.js			// 入口文件
-|	|--viewport.js	// hotcss.js
-|--build
-|	|--vue-loader.config.js		// Vue-loader配置
-|	|--webpack.config.js		// Webpack配置
-|--node_modules
-|	|--...
-|--postcss.config.js			// postcss配置
-|--package.json					
-|--.npmrc
-|--.babelrc
-|--README.md
+.
+├── node_modules
+│   ├── ...
+├── app
+│   ├── assets
+│   │   ├── images
+│   │   └── styles
+│   ├── components
+│   │   ├── common          # 抽象组件
+│   │   │   └── ...
+│   │   ├── home            # 主路由组件
+│   │   │   └── index.vue
+│   │   └── layout          # 布局组件
+│   │       └── ...
+│   ├── config              # 配置
+│   │   └── router.js
+│   ├── App.vue             # 根组件
+│   ├── index.html          # 页面模板
+│   ├── index.js            # 入口文件
+│   └── viewport.js         # hotcss
+├── build
+│   ├── vue-loader.config.js
+│   └── webpack.config.js
+├── package-lock.json
+├── package.json
+├── .npmrc
+├── .babelrc
+├── postcss.config.js
+└── README.md
+
 ```
